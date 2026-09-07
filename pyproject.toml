@@ -1,5 +1,5 @@
 [project]
-name = "student-manger"
+name = "student-manager"
 version = "0.1.0"
 description = "A simple student management system"
 readme = "README.md"

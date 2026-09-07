@@ -7,7 +7,6 @@ class StudentManager:
         # 程序启动时，从文件加载学生
         self.students = load_students()
 
-
     def add_student(self, student):
 
         for s in self.students:
@@ -17,7 +16,7 @@ class StudentManager:
                 print("学号已存在")
 
                 return False
-            
+
         self.students.append(student)
 
         return True
@@ -30,7 +29,6 @@ class StudentManager:
 
         for student in self.students:
             print(student)
-
 
     def delete_student(self, student_id):
 
@@ -45,7 +43,6 @@ class StudentManager:
 
         print("没有找到该学生")
 
-
     def update_student(self, student_id, name, age):
 
         for student in self.students:
@@ -58,9 +55,7 @@ class StudentManager:
                 print("修改成功")
                 return
 
-
         print("没有找到该学生")
-
 
     def save(self):
 

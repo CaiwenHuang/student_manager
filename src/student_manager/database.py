@@ -14,20 +14,11 @@ def save_students(students):
 
     for student in students:
         data.append(
-            {
-                "student_id": student.student_id,
-                "name": student.name,
-                "age": student.age
-            }
+            {"student_id": student.student_id, "name": student.name, "age": student.age}
         )
 
     with open(DATA_FILE, "w", encoding="utf-8") as f:
-        json.dump(
-            data,
-            f,
-            ensure_ascii=False,
-            indent=4
-        )
+        json.dump(data, f, ensure_ascii=False, indent=4)
 
 
 def load_students():
@@ -39,18 +30,12 @@ def load_students():
 
         data = json.load(f)
 
-
     students = []
 
     for item in data:
 
-        student = Student(
-            item["name"],
-            item["age"],
-            item["student_id"]
-        )
+        student = Student(item["name"], item["age"], item["student_id"])
 
         students.append(student)
-
 
     return students
